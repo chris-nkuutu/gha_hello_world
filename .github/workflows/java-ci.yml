@@ -17,7 +17,7 @@ jobs:
       - name: Build with Maven
         run: mvn -B package --file pom.xml
       - name: Run program
-        run: java -p target/gha_hello_world-1.0-SNAPSHOT.jar org.example.Main > output.txt
+        run: java -cp target/gha_hello_world-1.0-SNAPSHOT.jar org.example.Main > output.txt
       - name: Upload output
         uses: actions/upload-artifact@v4
         with:
